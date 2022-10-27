@@ -1,0 +1,24 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ []
+
+ :builds
+ {:main
+  {:target :npm-module
+   :output-dir "app/js"
+   :runtime :node
+   :entries [demo.main
+             demo.preload]}
+
+  :renderer
+  {:target :browser
+   :devtools {:watch-dir "app/public"}
+   :output-dir "app/public/js"
+   :asset-path "js"
+   :modules {:app {:init-fn demo.renderer/init}}}}
+ }

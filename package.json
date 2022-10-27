@@ -1,0 +1,12 @@
+{
+  "name": "electron-cljs",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app/main.js",
+  "devDependencies": {
+    "shadow-cljs": "2.20.7"
+  },
+  "dependencies": {
+    "electron": "^21.2.0"
+  }
+}
