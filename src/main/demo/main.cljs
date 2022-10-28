@@ -26,7 +26,7 @@
     (fn [event title]
       (.setTitle main-window title))))
 
-(defn init []
+(defn ^:export init []
   (js-await [_ (e/app.whenReady)]
     (create-window)
     (e/app.on "activate"

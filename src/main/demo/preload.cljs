@@ -1,7 +1,7 @@
 (ns demo.preload
   (:require ["electron" :as e]))
 
-(defn init []
+(defn ^:export init []
   (e/contextBridge.exposeInMainWorld
     "electronAPI"
     #js {:setTitle
